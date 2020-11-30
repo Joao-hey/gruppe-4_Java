@@ -2,9 +2,11 @@ package com.company;
 import javax.swing.*;
 import java.util.Scanner;
 import java.lang.String;
+import public class Person
 
 public class Main {
     static Scanner myObj = new Scanner(System.in);
+    public static Person[] registeredPerson = new Person[10]
 
     public static void main(String[] args) {
 
@@ -35,7 +37,7 @@ public class Main {
             addresse = myObj.nextLine();
 
             System.out.println("Geben Sie Ihr wohnort an format (Wohnort, PLZ)");
-            String wohnort;
+            int wohnort;
             wohnort = myObj.nextLine();
 
         } else {
