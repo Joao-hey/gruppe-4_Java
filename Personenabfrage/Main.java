@@ -1,12 +1,15 @@
 package com.company;
+package ch.csbe.Modul403.Codeproject;
 import javax.swing.*;
 import java.util.Scanner;
 import java.lang.String;
-import public class Person
+
 
 public class Main {
+    public static Person[] registerdPerson = new Person[10];
     static Scanner myObj = new Scanner(System.in);
-    public static Person[] registeredPerson = new Person[10]
+    Person newPerson = new Person();
+
 
     public static void main(String[] args) {
 
@@ -14,7 +17,6 @@ public class Main {
         PersonenAbfrage();
 
     }
-
 
     static void PersonenAbfrage() {
 
@@ -32,13 +34,17 @@ public class Main {
 
         if (age >= 16) {
 
-            System.out.println("Geben Sie Ihre Addresse an format (Strasse, Nr)");
+            System.out.println("Geben Sie Ihre Addresse an format (Strasse)");
             String addresse;
             addresse = myObj.nextLine();
 
-            System.out.println("Geben Sie Ihr wohnort an format (Wohnort, PLZ)");
-            int wohnort;
-            wohnort = myObj.nextLine();
+            System.out.println("Geben Sie Ihr postleitzahl an format (PLZ)");
+            int plz;
+            plz = myObj.nextLine();
+
+            System.out.println("Geben Sie Ihr Wohnort an format (Wohnort)");
+            String city;
+            city = myObj.nextLine();
 
         } else {
             System.exit(0);
