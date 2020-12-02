@@ -8,15 +8,30 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-
-
         Person newPerson2 = new Person();
         newPerson2.setFirstName("William");
 
+        // static void Hauptmenue() {
         System.out.println("1. Create a new Account");
         System.out.println("2. Show all account's");
         System.out.println("3. Stop the Programm");
         int input = scan.nextInt();
+        /*
+        Mein vorschlag:
+
+        if (input == 2) {
+            (Code)
+         }
+
+        if (input == 3) {
+            System.exit(0);
+         }
+
+         */
+
+
+
+        // static void Abfrage() {
         while (true)
         if (input == 1) {
             System.out.println("what's your first Name?");
@@ -55,6 +70,7 @@ public class Main {
             else {
                 System.out.println("Unable to process Answer");
             }
+            break;
         }
     }
 }
