@@ -1,25 +1,22 @@
 package Basic;
 import java.util.Scanner;
 
-
 public class Main {
     public static Person[] registerdPerson = new Person[10];
     public static int personCount = 0;
     public static Scanner scan = new Scanner(System.in);
 
     public static void main(String[] args) {
-        Person newPerson2 = new Person();
-        newPerson2.setFirstName("William");
-
-        Hauptmenue();
+        Hauptmenu();
     }
 
-    static void Hauptmenue() {
-        System.out.println("Welcome to are Program");
+    static void Hauptmenu() {
+        System.out.println("Welcome to our Program");
         System.out.println("----------------------------------");
-        System.out.println("Create a new Account, press 1");
-        System.out.println("Show all account's, press 2");
-        System.out.println("Stop the Program, press 3");
+        System.out.println("Create a new Account    press 1");
+        System.out.println("Show all account's      press 2");
+        System.out.println("To Delete an account    press 3");
+        System.out.println("Stop the Program        press 4");
         System.out.println("---------------------------------");
         int input = scan.nextInt();
 
@@ -27,9 +24,13 @@ public class Main {
             Abfrage();
         }
 
-        if (input == 2) {
+        else if (input == 2) {
             System.out.println("This System is not working at the monent, sorry error M_403");
         } else if (input == 3) {
+            //Hier kommt der Auftrag von Lakshan
+            System.exit(0);
+        }
+        else if (input == 4) {
             System.exit(0);
         }
 
@@ -43,7 +44,7 @@ public class Main {
             String firstName = scan.next();
             System.out.println("What's your Last Name?");
             String lastName = scan.next();
-            System.out.println("Is your Name" + "" + firstName + " " + lastName + "?");
+            System.out.println("Is your Name " + firstName + " " + lastName + "?");
             System.out.println("y/n");
             String yes = scan.next();
             if (yes.equals("y")) {
@@ -63,6 +64,7 @@ public class Main {
                     newPerson.setCity(city);
                     System.out.println("What's your Postal code (PLZ)");
                     String PLZ = scan.next();
+                    newPerson.setPLZ(PLZ);
                     System.out.println("");
 
                 }
@@ -76,6 +78,6 @@ public class Main {
             break;
         }
 
-        Hauptmenue();
+        Hauptmenu();
     }
 }
