@@ -23,17 +23,15 @@ public class Main {
         if (input == 1) {
             Abfrage();
         } else if (input == 2) {
-            System.out.println("This System is not working at the monent, sorry error M_403");
+            AlleBenutzer();
         } else if (input == 3) {
             System.exit(0);
         }
 
     }
     static void AlleBenutzer() {
-        for (int i = 0 ; i <= personCount ; i++ ){
-            registerdPerson[i].getFirstName();
-            registerdPerson[i].getLastName();
-            System.out.println(registerdPerson[i]);
+        for (int i = 0 ; i < personCount ; i++ ){
+            System.out.println(registerdPerson[i].getFirstName());
         }
     }
 
@@ -81,7 +79,8 @@ public class Main {
                 break;
             }
 
-            Hauptmenu();
+
         }
+        Hauptmenu();
     }
 }
