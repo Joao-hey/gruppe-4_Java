@@ -1,4 +1,4 @@
-package com.company;
+package Basic;
 package ch.csbe.Modul403.Codeproject;
 import javax.swing.*;
 import java.util.Scanner;

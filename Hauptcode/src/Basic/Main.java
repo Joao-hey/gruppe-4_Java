@@ -23,15 +23,18 @@ public class Main {
         if (input == 1) {
             Abfrage();
         } else if (input == 2) {
-            AlleBenutzer();
+           AlleBenutzer();
         } else if (input == 3) {
             System.exit(0);
         }
 
     }
     static void AlleBenutzer() {
-        for (int i = 0 ; i < personCount ; i++ ){
+        for (int i = 0 ; i <= personCount ; i++ ){
+            registerdPerson[i].getFirstName();
+            registerdPerson[i].getLastName();
             System.out.println(registerdPerson[i].getFirstName());
+            System.out.println(registerdPerson[i].getLastName());
         }
     }
 
