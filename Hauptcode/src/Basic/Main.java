@@ -31,7 +31,9 @@ public class Main {
     }
     static void AlleBenutzer() {
         for (int i = 0 ; i <= personCount ; i++ ){
-            //registerdPerson[i].get
+            registerdPerson[i].getFirstName();
+            registerdPerson[i].getLastName();
+            System.out.println(registerdPerson[i]);
         }
     }
 
