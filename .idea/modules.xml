@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Begrüssung/Begrüssung.iml" filepath="$PROJECT_DIR$/Begrüssung/Begrüssung.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Hauptcode/Hauptcode.iml" filepath="$PROJECT_DIR$/Hauptcode/Hauptcode.iml" />
       <module fileurl="file://$PROJECT_DIR$/gruppe-4_Java.iml" filepath="$PROJECT_DIR$/gruppe-4_Java.iml" />
     </modules>
   </component>
