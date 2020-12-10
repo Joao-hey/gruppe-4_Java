@@ -32,6 +32,11 @@ public class Main {
     static void AlleBenutzer() {
         for (int i = 0 ; i < personCount ; i++ ){
             System.out.println(registerdPerson[i].getFirstName());
+            System.out.println(registerdPerson[i].getLastName());
+            System.out.println(registerdPerson[i].getAge());
+            System.out.println(registerdPerson[i].getStreet());
+            System.out.println(registerdPerson[i].getCity());
+            System.out.println(registerdPerson[i].getPLZ());
         }
     }
 
