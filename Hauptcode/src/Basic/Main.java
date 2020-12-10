@@ -6,13 +6,18 @@ public class Main {
     public static Person[] registerdPerson = new Person[10];
     public static int personCount = 0;
     public static Scanner scan = new Scanner(System.in);
+    public static int start = 0;
 
     public static void main(String[] args) {
-        Hauptmenu();
+        Hauptmenü();
     }
 
-    static void Hauptmenu() {
-        System.out.println("Welcome to our Program");
+    static void Hauptmenü() {
+        System.out.println(" ");
+        if (start == 0) {
+            System.out.println("Welcome to our Program");
+            start++;
+        }
         System.out.println("----------------------------------");
         System.out.println("Create a new Account    press 1");
         System.out.println("Show all account's      press 2");
@@ -26,11 +31,16 @@ public class Main {
             AlleBenutzer();
         } else if (input == 3) {
             System.exit(0);
+        } else {
+            System.out.println("Unable to process this Command");
+            System.out.println("Please use one of the commands displayed");
+            Hauptmenü();
         }
 
     }
+
     static void AlleBenutzer() {
-        for (int i = 0 ; i < personCount ; i++ ){
+        for (int i = 0; i < personCount; i++) {
             System.out.println(registerdPerson[i].getFirstName());
             System.out.println(registerdPerson[i].getLastName());
             System.out.println(registerdPerson[i].getAge());
@@ -38,6 +48,7 @@ public class Main {
             System.out.println(registerdPerson[i].getCity());
             System.out.println(registerdPerson[i].getPLZ());
         }
+        Hauptmenü();
     }
 
     static void Abfrage() {
@@ -61,7 +72,7 @@ public class Main {
                 String city = scan.next();
                 newPerson.setCity(city);
                 System.out.println("What's your Postal code (PLZ)");
-                String PLZ = scan.next();
+                int PLZ = scan.nextInt();
                 newPerson.setPLZ(PLZ);
                 System.out.println("Are the following information correct");
                 System.out.println("Firstname = " + firstName);
@@ -83,9 +94,7 @@ public class Main {
                 }
                 break;
             }
-
-
         }
-        Hauptmenu();
+        Hauptmenü();
     }
 }

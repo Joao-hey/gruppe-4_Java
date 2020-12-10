@@ -6,7 +6,7 @@ public class Person {
     private int age;
     private String street;
     private String city;
-    private String PLZ;
+    private int PLZ;
 
     //Getter Functions
     public String getFirstName() {return firstName;}
@@ -14,7 +14,7 @@ public class Person {
     public int getAge() {return age;}
     public String getStreet() {return street;}
     public String getCity() {return city;}
-    public String getPLZ() {return PLZ;}
+    public int getPLZ() {return PLZ;}
 
     //Setter Methods
     public void setFirstName(String firstName) {this.firstName = firstName;}
@@ -22,5 +22,5 @@ public class Person {
     public void setAge(int age) {this.age = age;}
     public void setStreet(String street) {this.street = street;}
     public void setCity(String city) {this.city = city;}
-    public void setPLZ(String PLZ) {this.PLZ = PLZ;}
+    public void setPLZ(int PLZ) {this.PLZ = PLZ;}
 }
