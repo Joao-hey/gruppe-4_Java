@@ -43,18 +43,23 @@ public class Main {
 
     static void AlleBenutzer() {
         for (int i = 0; i < personCount; i++) {
-            System.out.println(registerdPerson[i].getFirstName());
-            System.out.println(registerdPerson[i].getLastName());
-            System.out.println(registerdPerson[i].getAge());
-            System.out.println(registerdPerson[i].getStreet());
-            System.out.println(registerdPerson[i].getCity());
-            System.out.println(registerdPerson[i].getPLZ());
+            System.out.println(" ");
+            System.out.println("User " + (i + 1));
+            System.out.println("Firstname = " + registerdPerson[i].getFirstName());
+            System.out.println("Lastname  = " + registerdPerson[i].getLastName());
+            System.out.println("Age       = " + registerdPerson[i].getAge());
+            if (registerdPerson[i].getAge() >= 16) {
+                System.out.println("Address   = " + registerdPerson[i].getStreet());
+                System.out.println("City      = " + registerdPerson[i].getCity());
+                System.out.println("PLZ       = " + registerdPerson[i].getPLZ());
+            }
         }
         Hauptmenü();
     }
 
     static void Abfrage() {
         while (true) {
+            System.out.println(" ");
             System.out.println("what's your first Name?");
             String firstName = scan.next();
             System.out.println("What's your Last Name?");
@@ -64,8 +69,8 @@ public class Main {
             newPerson.setLastName(lastName);
             System.out.println("How old are you?");
             int age = scan.nextInt();
+            newPerson.setAge(age);
             if (age >= 16) {
-                newPerson.setAge(age);
                 System.out.println("Great you are " + age + " years old.");
                 System.out.println("On wich street to you live on? (Only Street name)");
                 String street = scan.next();
@@ -78,11 +83,11 @@ public class Main {
                 newPerson.setPLZ(PLZ);
                 System.out.println("Are the following information correct");
                 System.out.println("Firstname = " + firstName);
-                System.out.println("Lastname = " + lastName);
-                System.out.println("age = " + age);
-                System.out.println("Address = " + street);
-                System.out.println("City = " + city);
-                System.out.println("PLZ = " + PLZ);
+                System.out.println("Lastname  = " + lastName);
+                System.out.println("Age       = " + age);
+                System.out.println("Address   = " + street);
+                System.out.println("City      = " + city);
+                System.out.println("PLZ       = " + PLZ);
                 System.out.println(" ");
                 System.out.println("y/n");
                 String yes1 = scan.next();
@@ -94,12 +99,24 @@ public class Main {
                 } else {
                     System.out.println("Unable to process Answer");
                 }
-                break;
             } else {
-                registerdPerson[personCount] = newPerson;
-                personCount++;
-                Hauptmenü();
+                System.out.println("Are the following information correct");
+                System.out.println("Firstname = " + firstName);
+                System.out.println("Lastname = " + lastName);
+                System.out.println("Age = " + age);
+                System.out.println(" ");
+                System.out.println("y/n");
+                String yes1 = scan.next();
+                if (yes1.equals("y")) {
+                    registerdPerson[personCount] = newPerson;
+                    personCount++;
+                } else if (yes1.equals("n")) {
+                    System.out.println("Good luck next time");
+                } else {
+                    System.out.println("Unable to process Answer");
+                }
             }
+            break;
         }
         Hauptmenü();
     }
