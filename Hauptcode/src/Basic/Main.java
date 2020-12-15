@@ -30,6 +30,8 @@ public class Main {
         } else if (input == 2) {
             AlleBenutzer();
         } else if (input == 3) {
+            System.out.println("good Bye, see you next time");
+            System.out.println("This code was made by Joao, Lakshan and William");
             System.exit(0);
         } else {
             System.out.println("Unable to process this Command");
@@ -93,6 +95,10 @@ public class Main {
                     System.out.println("Unable to process Answer");
                 }
                 break;
+            } else {
+                registerdPerson[personCount] = newPerson;
+                personCount++;
+                Hauptmenü();
             }
         }
         Hauptmenü();
